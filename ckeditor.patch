@@ -1,0 +1,23 @@
+--- ckeditor.config.js	2010-11-21 18:30:14.000000000 -0500
++++ ckeditor.configNew0.js	2010-11-21 18:31:45.000000000 -0500
+@@ -35,6 +35,20 @@ CKEDITOR.editorConfig = function(config)
+   // Define as many toolbars as you need, you can change toolbar names and remove or add buttons.
+   // List of all buttons is here: http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html#.toolbar_Full
+ 
++  /*
++   * Drupal O toolbar. This toolbar does not require full HTML. 
++   * It does require including <u> in allowed filtered HTML tags.
++   */
++  config.toolbar_DrupalO= [
++      ['Source'],
++      ['Maximize'],
++      ['Cut','Copy','Paste','PasteText','-', /* 'SpellChecker', 'Scayt' */ ],
++      ['Undo','Find','-'],
++      ['Bold','Italic','Underline'],
++      ['NumberedList','BulletedList'],
++      ['Link','Unlink'],
++     ];
++
+   // This toolbar should work fine with "Filtered HTML" filter
+   config.toolbar_DrupalFiltered = [
+     ['Source'],
